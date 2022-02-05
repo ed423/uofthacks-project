@@ -10,6 +10,9 @@ app.use(express.json());
 
 //ROUTES
 
+app.get("/", async(req, res) => {
+    res.send("Hello world");
+})
 //add a review
 app.post("/reviews", async(req, res) => {
     try {
