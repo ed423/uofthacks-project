@@ -33,7 +33,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.65;
+    opacity: 0.75;
     z-index: -1;
     content: '';
 }
@@ -151,7 +151,7 @@ button:hover {
 
 
 /* Selector for individual list items */
-.navbar-links li div a {
+.navbar-links li a {
     display: inline-block;
     padding: 0px 10px;
     text-decoration: none;
@@ -161,7 +161,7 @@ button:hover {
 }
 
 /* Change colors when hovering over menu buttons */
-.navbar-links li div a:hover {
+.navbar-links li a:hover {
     color: #7e0ebe;
 
 }
@@ -194,26 +194,21 @@ button:hover {
     justify-content: center;
 }
 
-/* Selector for down arrow image at the bottom of the home page */
-/* .downarrow img {
-    width: 40px;
-    margin-top: 85%;
-    animation: arrowmove 0.80s;
-    animation-iteration-count: infinite;
-} */
-
 @keyframes arrowmove {
     0% { margin-top: 83%;}
     50% { margin-top: 85%;}
     100% { margin-top: 83% }
 }
 
-
-/* SCROLL BAR */
 .about-container {
     height: 200vh;
 }
+#about {
+    font-size: 50px;
+    height: 200vh;
+}
 
+/* SCROLL BAR */
  /* width */
  ::-webkit-scrollbar {
     width: 7px;
@@ -236,3 +231,6 @@ button:hover {
     background: #7e0ebe; 
   }
   /* END SCROLL BAR */
+
+
+
