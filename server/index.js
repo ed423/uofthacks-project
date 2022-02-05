@@ -20,11 +20,13 @@ app.post("/reviews", async(req, res) => {
         console.error(err.message);
     }
 })
+
 //get all reviews
 app.get("/reviews", async(req, res) => {
     try {
         const allReviews = await pool.query("SELECT * FROM review");
         res.json(allReviews.rows);
+        res.send(allReviews.rows);
     } catch (err) {
         console.error(err.message);
     }
@@ -71,10 +73,7 @@ app.delete("/reviews/:id", async(req, res) => {
 })
 
 
-//delete a review
 
-
-
-app.listen(5000, () => {
-    console.log("server has started on port 5000");
+app.listen(2000, () => {
+    console.log("server has started on port 2000");
 })
