@@ -2,7 +2,7 @@ const express = require("express"); //req.body
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1000;
 const path = require("path");
 
 //middleware
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.set("views", path.join(__dirname,"../frontend/html-main"));
-app.use(express.static('css'));
+app.use(express.static(path.join(__dirname, "../frontend")));
 app.set("view engine", "pug");
 
 // app.use(express.static(__dirname + '../frontend/html-main'));
