@@ -1,14 +1,29 @@
 doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Rate My Concert
 
-head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Rate My Concert
+        link(rel="stylesheet" href="styles.css")
+        link(rel="shortcut icon" href="poop.png")
 
-    link(rel="stylesheet" href="styles.css")
-    link(rel="shortcut icon" href="poop.png")
+    body
+        .main
+            
+            .backbutton
+                a(href="../html-main/index.html")
+                    img(class = "goback" src="../Pics/left-chevron.png")
 
-body
-    nav     
-        img(src="../Pics/left-check.png")
+            .concerts
+                    p(class="header") Concerts
+
+            .bigbox
+                - const concerts = new Array ("Matrix", ["Tangled", "Alladin"], "Spiderman");
+                each n, i in concerts
+                    .box
+                        p= n + "-" + i
+
+            
+            
