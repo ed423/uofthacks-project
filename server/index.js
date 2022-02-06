@@ -9,8 +9,11 @@ const path = require("path");
 app.use(cors());
 app.use(express.json());
 
-app.set("views", path.join(__dirname,"../frontend"));
+app.set("views", path.join(__dirname,"../frontend/html-main"));
+app.use(express.static('css'));
 app.set("view engine", "pug");
+
+// app.use(express.static(__dirname + '../frontend/html-main'));
 
 //ROUTES
 
