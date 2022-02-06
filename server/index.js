@@ -3,15 +3,19 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 const PORT = process.env.PORT || 5000;
+const path = require("path");
 
 //middleware
 app.use(cors());
 app.use(express.json());
 
+app.set("views", path.join(__dirname,"../frontend"));
+app.set("view engine", "pug");
+
 //ROUTES
 
 app.get("/", async(req, res) => {
-    res.send("Hello world");
+    res.render("index");
 })
 //add a review
 app.post("/reviews", async(req, res) => {
